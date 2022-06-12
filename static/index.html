@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>WebApp</title>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="shortcut icon" href="dhx/common/favicon/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="dhx/common/favicon/icon-16.png" sizes="16x16" />
+  <link rel="icon" href="dhx/common/favicon/icon-32.png" sizes="32x32" />
+  <link rel="icon" href="dhx/common/favicon/icon-48.png" sizes="48x48" />
+  <link rel="icon" href="dhx/common/favicon/icon-96.png" sizes="96x96" />
+  <link rel="icon" href="dhx/common/favicon/icon-144.png" sizes="144x144" />
+
+  <!-- DHX -->
+  <link rel="stylesheet" href="dhx/codebase/suite.css?v=7.3.0" />
+  <link rel="stylesheet" href="dhx/common/index.css?v=7.3.0" />
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">WebApp</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="layout" style="height: calc(100% - 61px);"></div>
+
+  <!-- DHX -->
+  <script type="text/JavaScript" src="dhx/codebase/suite.js?v=7.3.0"></script>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <!-- Javascript -->
+  <script>
+    const layout = new dhx.Layout("layout", {
+      type: "line",
+      rows: [
+        {
+          id: "toolbar",
+          header: "Header",
+          collapsable: true,
+          height: "120px",
+          resizable: true
+        },
+        {
+          resizable: true,
+          cols: [
+            {
+              id: "sidebar",
+              header: "Sidebar",
+              collapsable: true,
+              width: "200px",
+              resizable: true
+            },
+            {
+              id: "content",
+              header: "Content",
+              resizable: true
+            },
+            {
+              id: "rightbar",
+              header: "Aside",
+              collapsable: true,
+              width: "200px"
+            }
+          ]
+        },
+        {
+          id: "footer",
+          header: "Footer",
+          collapsable: true,
+          height: "120px"
+        }
+      ]
+    });
+  </script>
+</body>
+
+</html>
